@@ -12,9 +12,9 @@ function teamMember(team) {
           <div key={idx} className="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
             <div className="member">
               <img src={member.picture} alt={member.picture} />
-              <h4>{member.name}</h4>
-              <span>{member.title}</span>
-              <p>{member.quote}</p>
+              <div dangerouslySetInnerHTML={{ __html: member.name }} /> 
+              <div dangerouslySetInnerHTML={{ __html: member.title }} /> 
+              <div dangerouslySetInnerHTML={{ __html: member.quote }} /> 
               <div className="social">
                 {member.twitter ? <a href={member.twitter}><i className="bi bi-twitter"></i></a> : null}
                 {member.facebook ? <a href={member.facebook}><i className="bi bi-facebook"></i></a>:null}
@@ -33,6 +33,8 @@ function teamMember(team) {
 
 function team (props){
 
+  let p1Team = props.contents.filter(e => e.id === 31)[0]
+  if(p1Team) p1Team = p1Team.Content; 
 
   return(
     <section id="team" className="team">
@@ -41,7 +43,7 @@ function team (props){
         <div className="section-title">
           <span>Team</span>
           <h2>Team</h2>
-          <p>The dream team in strict alphabetical order. Billy, your Linkedin photo was to low quality</p>
+          <div dangerouslySetInnerHTML={{ __html: p1Team }} /> 
         </div>
         <div  className="row">
           {teamMember(props.team)}

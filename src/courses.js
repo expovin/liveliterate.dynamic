@@ -9,8 +9,8 @@ function listCourses(courses) {
         <div key={idx} className="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
           <div className="icon-box">
             <div className="icon"><i className={course.icon}></i></div>
-            <h4><a href="">{course.name}</a></h4>
-            <p>{course.shortDesc}</p>
+            <div dangerouslySetInnerHTML={{ __html: course.name }} /> 
+            <div dangerouslySetInnerHTML={{ __html: course.shortDesc }} /> 
           </div>
         </div>      
     )

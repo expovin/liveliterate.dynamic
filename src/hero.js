@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 function hero (props){
 
   let title = props.contents.filter(e => e.id === 4)[0]
@@ -19,9 +18,9 @@ function hero (props){
   return(
     <section id="hero" className="d-flex align-items-center" style={{backgroundImage: 'url('+image+')'}}>
     <div className="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
-      <a href="#CourseContent" className="btn-get-started scrollto" onClick={() => props.setShowCourses()}>{tryItButton}</a>
+      <div dangerouslySetInnerHTML={{ __html: title }} />
+      <div dangerouslySetInnerHTML={{ __html: subtitle }} />
+      <a href="#CourseContent" className="btn-get-started scrollto" onClick={() => props.setShowCourses()}><div dangerouslySetInnerHTML={{ __html: tryItButton }} /></a>
     </div>
   </section>
 

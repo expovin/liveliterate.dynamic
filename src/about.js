@@ -41,16 +41,13 @@ function about (props){
             <img src={image} className="img-fluid" alt="" />
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>{title}</h3>
-            <p className="fst-italic">
-              {p1}
-            </p>            
+            <div dangerouslySetInnerHTML={{ __html: title }} />   
+            <div dangerouslySetInnerHTML={{ __html: p1 }} />   
+       
             <ul>
               {makeList(l1Arr)}
             </ul>
-            <p>
-              {p2}
-            </p>
+              <div dangerouslySetInnerHTML={{ __html: p2 }} /> 
           </div>
         </div>
 

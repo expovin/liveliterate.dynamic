@@ -46,13 +46,13 @@ function footer (props){
 
           <div className="col-lg-4 col-md-6">
             <div className="footer-info">
-              <h3>{title}</h3>
-              <p>
+            <div dangerouslySetInnerHTML={{ __html: title }} /><br />
+              
                 {contact_arr ? contact_arr[0] : null} <br />
                 {contact_arr ? contact_arr[1] : null}<br /><br />
-                <strong>Phone:</strong> {contact_p1}<br />
-                <strong>Email:</strong> {email_p1}<br />
-              </p>
+                <strong>Phone:</strong> <div dangerouslySetInnerHTML={{ __html: contact_p1 }} /><br />
+                <strong>Email:</strong> <div dangerouslySetInnerHTML={{ __html: email_p1 }} /><br />
+              
               <div className="social-links mt-3">
               {twitter ?  <a href={twitter} className="twitter"><i className="bi bi-twitter"></i></a> : null}
               {facebook ? <a href={facebook} className="facebook"><i className="bi bi-facebook"></i></a>:null}

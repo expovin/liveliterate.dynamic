@@ -11,7 +11,7 @@ function header (props){
     <header id="header" className={"d-flex align-items-center" + props.fixTopBar} >
     <div className="container d-flex align-items-center justify-content-between">
 
-      <h1 className="logo"><a href="index.html">{title}</a></h1>            
+    <div dangerouslySetInnerHTML={{ __html: title }} />           
 
       <nav id="navbar" className="navbar">
         <ul>

@@ -146,7 +146,7 @@ class App extends Component {
     return(
       <main id="main">
       <About contents={this.state.contents}/>
-        <Team team={this.state.team}/>
+        <Team team={this.state.team} contents={this.state.contents}/>
         <Courses courses={this.state.courses} setShowCourses={this.setShowCourses}/>
         <CTA contents={this.state.contents}/>
         <Contacts contents={this.state.contents} saveMessages={this.saveMessages}/>

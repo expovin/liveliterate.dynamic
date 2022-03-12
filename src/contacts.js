@@ -40,31 +40,31 @@ function contacts(props) {
         <div className="section-title">
           <span>{title}</span>
           <h2>{title}</h2>
-          <p>{p1}</p>
+          <div dangerouslySetInnerHTML={{ __html: p1 }} /> 
         </div>
 
         <div className="row" data-aos="fade-up">
           <div className="col-lg-6">
             <div className="info-box mb-4">
               <i className="bx bx-map"></i>
-              <h3>{address_title}</h3>
-              <p>{address_p1}</p>
+              <div dangerouslySetInnerHTML={{ __html: address_title }} /> 
+              <div dangerouslySetInnerHTML={{ __html: address_p1 }} /> 
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="info-box  mb-4">
               <i className="bx bx-envelope"></i>
-              <h3>{email_title}</h3>
-              <p>{email_p1}</p>
+              <div dangerouslySetInnerHTML={{ __html: email_title }} /> 
+              <div dangerouslySetInnerHTML={{ __html: email_p1 }} /> 
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="info-box  mb-4">
               <i className="bx bx-phone-call"></i>
-              <h3>{contact_title}</h3>
-              <p>{contact_p1}</p>
+              <div dangerouslySetInnerHTML={{ __html: contact_title }} /> 
+              <div dangerouslySetInnerHTML={{ __html: contact_p1 }} /> 
             </div>
           </div>
 

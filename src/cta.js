@@ -21,9 +21,9 @@ function cta (props){
       <div className="container" data-aos="zoom-in">
 
         <div className="text-center">
-          <h3>{title}</h3>
-          <p> {p1}</p>
-          <a className="cta-btn" href="https://www.surveymonkey.com/r/M5BMZ88" target="_blank">{bt}</a>
+          <div dangerouslySetInnerHTML={{ __html: title }} /> 
+          <div dangerouslySetInnerHTML={{ __html: p1 }} /> 
+          <a className="cta-btn" href="https://www.surveymonkey.com/r/M5BMZ88" target="_blank"><div dangerouslySetInnerHTML={{ __html: bt }} /> </a>
         </div>
 
       </div>

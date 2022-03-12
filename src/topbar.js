@@ -28,8 +28,8 @@ function topbar (props){
     <section id="topbar" className="d-flex align-items-center">
       <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="contact-info d-flex align-items-center">
-          <i className="bi bi-envelope-fill"></i><a href={"mailto:"+email}>{email}</a>
-          <i className="bi bi-phone-fill phone-icon"></i>{phone} 
+          <i className="bi bi-envelope-fill"></i><a href={"mailto:"+email}><div dangerouslySetInnerHTML={{ __html: email }} />   </a>
+          <i className="bi bi-phone-fill phone-icon"></i><div dangerouslySetInnerHTML={{ __html: phone }} />   
         </div>
         <div className="social-links d-none d-md-block">
           
