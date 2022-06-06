@@ -4,26 +4,14 @@ import React, { Component } from 'react';
 
 function cta (props){
 
-  let title = props.contents.filter(e => e.id === 10)[0]
-  if(title) title = title.Content;
-
-  let p1 = props.contents.filter(e => e.id === 11)[0]
-  if(p1) p1 = p1.Content;
-
-  let bt = props.contents.filter(e => e.id === 12)[0]
-  if(bt) bt = bt.Content;  
-
-  let image = props.contents.filter(e => e.id === 29)[0]
-  if(image) image = image.Content;    
-
   return(
-    <section id="cta" className="cta" style={{backgroundImage: 'url('+image+')'}}>
+    <section id="cta" className="cta" style={{backgroundImage: 'url(https://s3.eu-central-1.amazonaws.com/liveliterate.com/362c66583a7e35c2464efbf93b373f89.jpeg)'}}>
       <div className="container" data-aos="zoom-in">
 
         <div className="text-center">
-          <h3>{title}</h3>
-          <p> {p1}</p>
-          <a className="cta-btn" href="https://www.surveymonkey.com/r/M5BMZ88" target="_blank">{bt}</a>
+          <h3>Are you interested?</h3>
+          <p>Leave your email and be the first to be update when the first course will be available.</p>
+          <a className="cta-btn" href="https://www.surveymonkey.com/r/M5BMZ88" target="_blank">NOTIFY ME</a>
         </div>
 
       </div>

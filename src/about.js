@@ -1,36 +1,7 @@
 import React, { Component } from 'react';
 
 
-function makeList(elements) {
-
-  let myList=null; 
-  if(elements) {
-    myList = elements.map((e,idx) => <li key={idx}><i className="bi bi-check-circle"></i> {e} </li>)
-  }
-  return myList;
-}
-
 function about (props){
-
-  let l1Arr=null;
-
-  let image = props.contents.filter(e => e.id === 28)[0]
-  if(image) image = image.Content;  
-
-  let title = props.contents.filter(e => e.id === 6)[0]
-  if(title) title = title.Content;
-
-  let p1 = props.contents.filter(e => e.id === 7)[0]
-  if(p1) p1 = p1.Content;
-
-  let p2 = props.contents.filter(e => e.id === 8)[0]
-  if(p2) p2 = p2.Content;  
-
-  let l1 = props.contents.filter(e => e.id === 9)[0]
-  if(l1) {
-    l1 = l1.Content;  
-    l1Arr = l1.split("|");    
-  }
 
   return(
     <section id="about" className="about">
@@ -38,18 +9,20 @@ function about (props){
 
         <div className="row">
           <div className="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src={image} className="img-fluid" alt="" />
+            <img src="https://s3.eu-central-1.amazonaws.com/liveliterate.com/54da060ff12fec52c6a08eecbdde421f.jpeg" className="img-fluid" alt="" />
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>{title}</h3>
+            <h3>What makes us unique</h3>
             <p className="fst-italic">
-              {p1}
+            We are the first and only online platform that seeks to educate our learners through a combination of on and off-screen activities. Our learning method leverages the digital to provide learners with stimulating and entertaining stories and content that seamlessly transition into practical off-screen activities, engaging with family and friends, and putting their learning into practice.
             </p>            
             <ul>
-              {makeList(l1Arr)}
+              <li><i className="bi bi-check-circle"></i>We believe in removing the parents' need to 'control' and 'restrict' a child's learning experience. </li>
+              <li><i className="bi bi-check-circle"></i>We believe that it is not only the acquiring of knowledge which is important, but also the fostering of social and real-world skills to apply the knowledge.</li>
+              <li><i className="bi bi-check-circle"></i>We believe the relationship between parent and child is key to their learning journey.</li>
             </ul>
             <p>
-              {p2}
+            The social and emotional learning of children is still undervalued and often disregarded in formal education. This means the responsibility for the most part lies with parents, who may not be very knowledgeable or even aware on how to teach these fundamental concepts to children of varying ages. We at LivLit believe in education that goes beyond the academic and serves more practically to empower children in our current and future world to survive, flourish and create for themselves the future they envision.
             </p>
           </div>
         </div>

@@ -5,66 +5,38 @@ import FormMessage from './FormMessage';
 
 function contacts(props) {
 
-
-    let title = props.contents.filter(e => e.id === 13)[0]
-    if(title) title = title.Content;
-  
-    let p1 = props.contents.filter(e => e.id === 14)[0]
-    if(p1) p1 = p1.Content;
-  
-    let address_title = props.contents.filter(e => e.id === 15)[0]
-    if(address_title) address_title = address_title.Content;
-  
-    let address_p1 = props.contents.filter(e => e.id === 16)[0]
-    if(address_p1) address_p1 = address_p1.Content;
-    
-    let email_title = props.contents.filter(e => e.id === 17)[0]
-    if(email_title) email_title=email_title.Content;
-  
-    let email_p1 = props.contents.filter(e => e.id === 18)[0]
-    if(email_p1) email_p1=email_p1.Content;
-  
-    let contact_title = props.contents.filter(e => e.id === 19)[0]
-    if(contact_title) contact_title=contact_title.Content;
-  
-    let contact_p1 = props.contents.filter(e => e.id === 20)[0]
-    if(contact_p1) contact_p1=contact_p1.Content;
-  
-    let gmap = props.contents.filter(e => e.id === 26)[0]
-    if(gmap) gmap=gmap.Content;
-
   return(
     <section id="contact" className="contact">
       <div className="container">
 
         <div className="section-title">
-          <span>{title}</span>
-          <h2>{title}</h2>
-          <p>{p1}</p>
+          <span>CONTACT</span>
+          <h2>CONTACT</h2>
+          <p>Reach out for any question</p>
         </div>
 
         <div className="row" data-aos="fade-up">
           <div className="col-lg-6">
             <div className="info-box mb-4">
               <i className="bx bx-map"></i>
-              <h3>{address_title}</h3>
-              <p>{address_p1}</p>
+              <h3>Our Address</h3>
+              <p>Suite 2201 Eaton Centre 250 Yonge Street, Toronto Ontario M5B 2L7 Canada</p>
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="info-box  mb-4">
               <i className="bx bx-envelope"></i>
-              <h3>{email_title}</h3>
-              <p>{email_p1}</p>
+              <h3>Email Us</h3>
+              <p>clacarli@hotmail.com</p>
             </div>
           </div>
 
           <div className="col-lg-3 col-md-6">
             <div className="info-box  mb-4">
               <i className="bx bx-phone-call"></i>
-              <h3>{contact_title}</h3>
-              <p>{contact_p1}</p>
+              <h3>Call Us</h3>
+              <p>+39 353 432 8194</p>
             </div>
           </div>
 
@@ -73,7 +45,7 @@ function contacts(props) {
         <div className="row" data-aos="fade-up">
 
           <div className="col-lg-6 ">
-            <Iframe className="mb-4 mb-lg-0" src={gmap} frameBorder="0" style="border:0; width: 100%; height: 384px;" allow="fullscreen" width="100%" height="100%"></Iframe>
+            <Iframe className="mb-4 mb-lg-0" src="https://www.google.com/maps/embed/v1/place?q=Suite%202201%2C%20Eaton%20Centre%2C%20250%20Yonge%20Street%20Toronto%2C%20Ontario%2C%20M5B%202L7%2C%20Canada&key=AIzaSyCmrxSvwUDR5KGK0vYq40LFkJ-Au3KZC1U" frameBorder="0" style="border:0; width: 100%; height: 384px;" allow="fullscreen" width="100%" height="100%"></Iframe>
           </div>
 
           <FormMessage saveMessages={props.saveMessages}/>
